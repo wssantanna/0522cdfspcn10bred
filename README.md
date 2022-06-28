@@ -8,20 +8,87 @@
 
 Identificar os elementos de um documento HTML e reconhecer atributos globais.
 
-- [ ] Sintaxe da linguagem HTML
+- [x] Sintaxe da linguagem HTML
 
-    - [ ] Estrutura de um Documento HTML
+    - [x] Estrutura de um Documento HTML
 
-    - [ ] Elemento
+    - [x] Elemento
     
-    - [ ] Atributo
+    - [x] Atributo
      
-- [ ] Texto: Cabeçalho
+- [x] Texto: Cabeçalho
 
-- [ ] Texto: Parágrafo
+- [x] Texto: Parágrafo
 
-- [ ] Lista: Ordenadas / desordenadas
+- [x] Lista: Ordenadas / desordenadas
 
-- [ ] Imagem
+- [x] Imagem
 
-- [ ] Estrutura semântica
+- [x] Estrutura semântica
+
+### [Aula 12 - HTML: Formulário](./12/README.md)
+<small>28 de junho 2022 - terça-feira</small>
+
+- [ ] Métodos de envio
+
+    - [ ] Get
+
+    - [ ] Post
+
+- [ ] Tipos de campos
+
+    - [ ] Text
+
+    - [ ] Email
+
+    - [ ] Password
+
+    - [ ] Date
+
+    - [ ] Tel
+
+    - [ ] Radio
+
+    - [ ] Checkbox
+
+    - [ ] Hidden
+
+- [ ] Atributos 
+
+    - [ ] required
+
+    - [ ] pattern
+
+    - [ ] value
+
+    - [ ] max
+
+    - [ ] min
+
+    - [ ] placeholder
+
+    - [ ] name
+
+    - [ ] id 
+
+- [ ] Lista de valores
+
+    - [ ] Select
+
+        - [ ] Option
+
+- [ ] Semântica
+
+    - [ ] Label
+
+        - [ ] Input
+
+    - [ ] Fieldset
+
+        - [ ] Legend
+
+    - [ ] Select
+
+        - [ ] Optgroup
+
+    - [ ] Devtools: Network

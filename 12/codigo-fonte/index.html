@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML: Formulário</title>
+</head>
+<body>
+    
+    <article>
+        <h1>Nova solicitação de passaporte</h1>
+        <p>Não utilize o botão voltar do seu navegador pois todos os dados serão perdidos. Utilize apenas os botões do próprio formulário.</p>
+
+        <form 
+            action="./servidor"
+            name="passaporte"
+            method="post"
+        >
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="nomeCompleto">Nome completo*:</label>
+                    <input 
+                        type="text"
+                        name="nomeCompleto" 
+                        id="nomeCompleto" 
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="telefone">Telefone*:</label>
+                    <!-- 
+                        Expressão regular capturada do stackoverflow
+                        https://pt.stackoverflow.com/questions/46672/como-fazer-uma-express%C3%A3o-regular-para-telefone-celular
+                        pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$"
+                        placeholder="(xx) xxxxx-xxxx"
+                    -->
+                    <input 
+                        type="tel"
+                        name="telefone"
+                        id="telefone"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="dataDeNascimento">Data de nascimento*:</label>
+                    <!--
+                        Atributos adicionais do input date
+                        https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input/date
+                    -->
+                    <input 
+                        type="date" 
+                        name="dataDeNascimento" 
+                        id="dataDeNascimento"
+                        max="2022-06-28"
+                    >
+                </div>
+                <div>
+                    <input 
+                        type="radio" 
+                        name="autorizacaoParaViajar" 
+                        id="emancipado"
+                        value="0"
+                    >
+                    <label for="emancipado">Emancipado</label>
+                </div>
+                <div>
+                    <input 
+                        type="radio" 
+                        name="autorizacaoParaViajar" 
+                        id="adocaoInternacional"
+                        value="1"
+                    >
+                    <label for="adocaoInternacional">Adoção Internacional</label>
+                </div>
+                <div>
+                    <label for="genero">Gênero:</label>
+                    <select 
+                        name="genero" 
+                        id="genero"
+                    >
+                        <option disabled selected>Escolha</option>
+                        <option value="2">Feminino</option>
+                        <option value="1">Masculino</option>
+                        <option value="0">Não especificado</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+        </form>
+
+    </article>
+
+</body>
+</html>
