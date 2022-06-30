@@ -29,66 +29,87 @@ Identificar os elementos de um documento HTML e reconhecer atributos globais.
 ### [Aula 12 - HTML: Formulário](./12/README.md)
 <small>28 de junho 2022 - terça-feira</small>
 
-- [ ] Métodos de envio
+- [x] Métodos de envio
 
-    - [ ] Get
+    - [x] Get
 
-    - [ ] Post
+    - [x] Post
 
-- [ ] Tipos de campos
+- [x] Tipos de campos
 
-    - [ ] Text
+    - [x] Text
 
-    - [ ] Email
+    - [x] Email
 
-    - [ ] Password
+    - [x] Password
 
-    - [ ] Date
+    - [x] Date
 
-    - [ ] Tel
+    - [x] Tel
 
-    - [ ] Radio
+    - [x] Radio
 
-    - [ ] Checkbox
+    - [x] Checkbox
 
     - [ ] Hidden
 
-- [ ] Atributos 
+- [x] Atributos 
 
-    - [ ] required
+    - [x] required
 
-    - [ ] pattern
+    - [x] pattern
 
-    - [ ] value
+    - [x] value
 
-    - [ ] max
+    - [x] max
 
-    - [ ] min
+    - [x] min
 
-    - [ ] placeholder
+    - [x] placeholder
 
-    - [ ] name
+    - [x] name
 
-    - [ ] id 
+    - [x] id 
 
-- [ ] Lista de valores
+- [x] Lista de valores
 
-    - [ ] Select
+    - [x] Select
 
-        - [ ] Option
+        - [x] Option
 
-- [ ] Semântica
+- [x] Semântica
 
-    - [ ] Label
+    - [x] Label
 
-        - [ ] Input
+        - [x] Input
 
-    - [ ] Fieldset
+    - [x] Fieldset
 
-        - [ ] Legend
+        - [x] Legend
 
-    - [ ] Select
+    - [x] Select
 
-        - [ ] Optgroup
+        - [x] Optgroup
 
-    - [ ] Devtools: Network
+    - [x] Devtools: Network
+
+### [Aula 13 - CSS: Introdução à Sintaxe](./13/README.md)
+<small>30 de junho 2022 - quinta-feira</small>
+
+- [ ] Sintaxe da linguagem CSS
+
+- [ ] Seletores
+
+    - [ ] Seleção: Global/Universal
+
+    - [ ] Seleção: Elemento 
+
+    - [ ] Seleção: Classe
+
+    - [ ] Seleção: Id
+
+    - [ ] Seleção: Atributo
+
+    - [ ] Seleção: Operadores
+
+    - [ ] Seleção: Especificidade

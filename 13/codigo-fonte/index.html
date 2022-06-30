@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 - CSS: Introdução a sintaxe</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 1. Id: #nome-id {} */
+
+        /* 2. Classe: .nome-class {} */
+
+        /* 3. Elemento: a {} */
+
+        /* 4. Atributo: a[href] */
+
+        /* 5. Valor do atributo: a[href="#"] */
+
+        /* 5.1. a[href="http"] */
+
+        /* 5.2. a[href^="http"] */
+
+        /* 5.3. a[href$="http"] */
+
+        /* 5.4. a[href*="http"] */
+
+        /* 5.5. a[href~="http"] */
+
+        /* 6. Concatenação: h1, p */
+
+        /* 7. Descendentes: li strong */
+
+        /* 8. Descendente: li > a */
+
+        /* 9. Irmão: h1 ~ h2 */
+
+        /* 10. Adjacente: h1 + p */
+
+    </style>
+</head>
+<body>
+    <article class="documento">
+        <h1 class="titulo">CSS: Seletores</h1>
+        <section id="topico1" class="topico">
+            <h2 class="subtitulo">Id: #nome-id {}</h2>
+            <p class="descricao">Seleção por <strong>id</strong> deve ser única, ou seja, utilize o nome da id em apenas um elemento.</p>
+        
+        </section>
+        <section id="topico2" class="topico">
+            <h2 class="subtitulo">Classe: .nome-class {}</h2>
+            <p class="descricao">Seleção por <strong>class</strong> pode ser utilizada sem restrições, ou seja, é perfeito para reaproveitamento de código.</p>
+        </section>
+        <section id="topico3" class="topico">
+            <h2 class="subtitulo">Elemento: a {}</h2>
+            <p class="descricao">Seleção por <strong>elemento</strong> deve ser utilizado com cautê-la, pois personaliza todos os elementos de sua seleção.</p>
+        </section>
+        <section id="topico4" class="topico">
+            <h2 class="subtitulo">Atributo: a[href]</h2>
+            <p class="descricao">Seleção por <strong>atributo</strong> segue a mesma regra do elemento, porém considerando que ele irá selecionar todos os elementos que possuam o atributo selecionado idependente do seu valor.</p>
+        </section>
+        <section id="topico5" class="topico">
+            <h2 class="subtitulo">Valor do atributo: a[href="#"]</h2>
+            <p class="descricao">Seleção por <strong>valor atributo</strong> segue a mesma regra da selação de atributo, porém considerando que ele irá selecionar todos os elementos que possuam o atributo selecionado e o valor selecionado.</p>
+            <h3 class="subtopico">a[href="http"]</h3>
+            <p class="descricao">Valor igual.</p>
+            <h3 class="subtopico">a[href^="http"]</h3>
+            <p class="descricao">Início do valor igual.</p>
+            <h3 class="subtopico">a[href$="http"]</h3>
+            <p class="descricao">Final do valor igual.</p>
+            <h3 class="subtopico">a[href*="http"]</h3>
+            <p class="descricao">Qualquer parte do valor igual.</p>
+            <h3 class="subtopico">a[href~="http"]</h3>
+            <p class="descricao">Valores sepados por espaço.</p>
+        </section>
+        <section id="topico6" class="topico">
+            <h2 class="subtitulo">Concatenação: h1, p</h2>
+            <p class="descricao">Multiplas seleções de elementos.</p>
+        </section>
+        <section id="topico5" class="topico">
+            <h2 class="subtitulo">Descendentes: li strong</h2>
+            <p class="descricao">Seleciona elementos descendente direto ou indiceto do elemento pai.</p>
+        </section>
+        <section id="topico6" class="topico">
+            <h2 class="subtitulo">Descendente: li > a</h2>
+            <p class="descricao">Seleciona elementos descendente direto do elemento pai.</p>
+        </section>
+        <section id="topico7" class="topico">
+            <h2 class="subtitulo">Irmão: h1 ~ h2</h2>
+            <p class="descricao">Seleciona o irmão/paraleto do elemento.</p>
+        </section>
+        <section id="topico8" class="topico">
+            <h2 class="subtitulo">Adjacente: h1 + p</h2>
+            <p class="descricao">Seleciona o irmão/parelelo direto do elemento.</p>
+        </section>
+    </article>
+</body>
+</html>
