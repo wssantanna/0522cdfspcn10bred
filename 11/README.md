@@ -89,7 +89,7 @@ Você pode usar uma `<article>` para definir áreas ou regiões para:
 - Entradas de Blog
 - Artigos
 
-``` html
+```html
 <article>
   <h2>Título</h2>
   <p>Lotes de texto.</p>
@@ -102,7 +102,7 @@ Você pode usar uma `<article>` para definir áreas ou regiões para:
 
 O elemento HTML `<aside>` representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.
   
-``` html
+```html
 <aside>
   <p>Algum conteudo relacionado a um <article></p>
 </aside>  
@@ -123,7 +123,7 @@ Diferente dos elementos `<section>` e `<article>` por exemplo, que não é acons
 - Não se deve utilizá-lo dentro de `<article>`, `<aside>`, `<section>`
 - É aconselhável se resumir as informações que deseja definir como principal. 
 
-``` html
+```html
 <main>
   <h1>Maçãs</h1>
   <p>A maçã é a fruta pomácea da macieira.</p>
@@ -218,6 +218,6 @@ Conselho o uso das seguintes ferramentas:
 - https://h5validator.appspot.com/dcm/asset 
 - https://validator.w3.org/
 
-### Material extracurrícular
+### Material extra-currícular
 
 - [HTML: SEO (Otimização para motores de busca)](./extra-curricular/README.md)

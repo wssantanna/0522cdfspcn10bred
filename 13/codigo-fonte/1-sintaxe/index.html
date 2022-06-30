@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 - Sintaxe</title>
+    <!-- 
+        3. Incorporando um documento externo 
+    -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+        2. Incorporado no documento 
+    -->
+    <style>
+
+        /* 
+            4. Seleção global 
+            Pontuação de Especificidade: 0
+        */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+
+        /* 
+            5. Seleção por id do elemento
+            Pontuação de Especificidade: 100 
+        */
+        #destaque {
+            background-color: lightblue;
+        }
+
+        /* 
+            6. Seleção por classe do elemento 
+            Pontuação de Especificidade: 10
+        */
+        .destaque {
+            background-color:lightsalmon;
+        }
+
+        .titulo {
+            font-size: 32px;
+            color: darkorchid;
+        }
+
+        /* 
+            7. Seleção por elemento html 
+            Pontuação de Especificidade: 1
+        */
+        h1 { 
+            font-size: 24px;
+            color: blue;
+        }
+
+        /* 
+            8. Seleção concatenada 
+            Pontuação de Especificidade: 111
+            Calculo = Id (100) + Elemento (1) + Classe (10)
+        */
+        #destaque h1.titulo {
+            background-color: deeppink;
+        }
+
+        /* 
+            9. Aplicar multiplos estilos 
+        */
+        .cor-primaria {
+            color: green;
+        }
+
+        .titulo-padrao {
+            font-family: Arial Black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <article>
+        <!-- 
+            9. É possível utilizar multiplas classes
+            para personalizar elementos.
+        -->
+        <h1 class="titulo-padrao cor-primaria">Título principal</h1>
+        <p>Descrição do título principal</p>
+    </article>
+
+    <main class="destaque" id="destaque">
+        <h1 class="titulo">Meu destaque</h1>
+        <p>Minha descrição para o destaque.</p>
+    </main>
+
+    <article class="destaque">
+        <!-- 
+            1. Inline 
+            Estilo aplicados diretamente no elemento sobrescrevem
+            qualquer instrução de estilos incorporados ou importações
+            de documentos externos.
+        -->
+        <h1 style="font-size: 52px; color: red;" class="titulo">Outro título</h1>
+    </article>
+
+    <article class="destaque">
+        <h1>Mais um outro título</h1>
+    </article>
+
+</body>
+</html>

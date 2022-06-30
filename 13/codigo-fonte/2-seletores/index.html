@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 - CSS: Introdução a sintaxe</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <article class="documento">
+        <h1 class="titulo">CSS: Seletores</h1>
+        <section id="topico1" class="topico">
+            <h2 class="subtitulo">Id: #nome-id {}</h2>
+            <p class="descricao">Seleção por <strong>id</strong> deve ser única, ou seja, utilize o nome da id em apenas um elemento.</p>
+            <div class="code">
+                <strong>#aplicativo</strong> {}
+                <br><br>
+                &lt;div <strong>id="aplicativo"</strong>&gt...&lt;/div&gt
+            </div>
+        </section>
+        <section id="topico2" class="topico">
+            <h2 class="subtitulo">Classe: .nome-class {}</h2>
+            <p class="descricao">Seleção por <strong>class</strong> pode ser utilizada sem restrições, ou seja, é perfeito para reaproveitamento de código.</p>
+            <div class="code">
+                <strong>.componente</strong> {}
+                <br><br>
+                &lt;article <strong>class"componente"</strong>&gt...&lt;/article&gt
+            </div>
+        </section>
+        <section id="topico3" class="topico">
+            <h2 class="subtitulo">Elemento: a {}</h2>
+            <p class="descricao">Seleção por <strong>elemento</strong> deve ser utilizado com cautê-la, pois personaliza todos os elementos de sua seleção.</p>
+            <div class="code">
+                <strong>a</strong> { text-decoration: none; }
+                <br><br>
+                <strong>&lt;a href="/sobre"&gtSobre&lt;/a&gt</strong>
+            </div>
+        </section>
+        <section id="topico4" class="topico">
+            <h2 class="subtitulo">Atributo: a[href]</h2>
+            <p class="descricao">Seleção por <strong>atributo</strong> segue a mesma regra do elemento, porém considerando que ele irá selecionar todos os elementos que possuam o atributo selecionado idependente do seu valor.</p>
+            <div class="code">
+                img[<strong>alt</strong>] {}
+                <br><br>
+                &lt;img src="#" <strong>alt=</strong>"Descrição"&gt
+            </div>
+        </section>
+        <section id="topico5" class="topico">
+            <h2 class="subtitulo">Valor do atributo: a[href="#"]</h2>
+            <p class="descricao">Seleção por <strong>valor atributo</strong> segue a mesma regra da selação de atributo, porém considerando que ele irá selecionar todos os elementos que possuam o atributo selecionado e o valor selecionado.</p>
+            
+            <h3 class="subtopico">a[href="http"]</h3>
+            <p class="descricao">Valor igual.</p>
+            <div class="code">
+                img[<strong>alt="#ParaCegoLer"</strong>]
+                <br><br>
+                &lt;img src="" <strong>alt="#ParaCegoLer"</strong>&gt
+            </div>
+
+            <h3 class="subtopico">a[href^="http"]</h3>
+            <p class="descricao">Início do valor igual.</p>
+            <div class="code">
+                a[href^="<strong>http://</strong>"]
+                <br><br>
+                &lt;a href="<strong>http://</strong>www.google.com"&gt
+            </div>
+            
+            <h3 class="subtopico">a[href$=".br"]</h3>
+            <p class="descricao">Final do valor igual.</p>
+            <div class="code">
+                a[href$="<strong>.br</strong>"]
+                <br><br>
+                &lt;a href="http://playground.com<strong>.br</strong>"&gt
+            </div>
+
+            <h3 class="subtopico">a[href*="http"]</h3>
+            <p class="descricao">Qualquer parte do valor igual.</p>
+            <div class="code">
+                a[href*="<strong>pt-br</strong>"]
+                <br><br>
+                &lt;a href="http://<strong>pt-br</strong>.playground.com"&gt
+            </div>
+            
+            <h3 class="subtopico">a[href~="http"]</h3>
+            <p class="descricao">Valores sepados por espaço.</p>
+            <div class="code">
+                .aplicativo[class~="<strong>tema-escuro</strong>"]
+                <br><br>
+                &lt;div class"aplicativo <strong>tema-escuro</strong>"&gt&lt;/div&gt
+                <br><br>
+                &lt;div class"aplicativo-pwa tema-escuro"&gt&lt;/div&gt
+            </div>
+        </section>
+        <section id="topico6" class="topico">
+            <h2 class="subtitulo">Concatenação: h1, p</h2>
+            <p class="descricao">Multiplas seleções de elementos.</p>
+            <div class="code">
+                <strong>h1, .titulo</strong> { font-family: sans-serif; }
+                <br>
+                <strong>&lt;h1&gt...&lt;/h1&gt</strong>
+                <br>
+                &lt;h2 <strong>class"titulo</strong>"&gt...&lt;/h2&gt
+            </div>
+        </section>
+        <section id="topico5" class="topico">
+            <h2 class="subtitulo">Descendentes: li strong</h2>
+            <p class="descricao">Seleciona elementos descendente direto ou indiceto do elemento pai.</p>
+            <div class="code">
+                <strong>.nav li</strong> { background: red; }
+                <br>
+                <br>
+                &lt;ul class="nav"&gt
+                <br>
+                &nbsp;&nbsp;<strong>&lt;li&gtFilho&lt;/li&gt</strong>
+                <br>
+                &nbsp;&nbsp;&lt;ul&gt
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;li&gtDescendente&lt;/li&gt</strong>
+            </div>
+        </section>
+        <section id="topico6" class="topico">
+            <h2 class="subtitulo">Descendente: li > a</h2>
+            <p class="descricao">Seleciona elementos descendente direto do elemento pai.</p>
+            <div class="code">
+                <strong>.nav > li</strong> { background: red; }
+                <br>
+                <br>
+                &lt;ul class="nav"&gt
+                <br>
+                &nbsp;&nbsp;<strong>&lt;li&gtFilho&lt;/li&gt</strong>
+                <br>
+                &nbsp;&nbsp;&lt;ul&gt
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gtDescendente&lt;/li&gt
+            </div>
+        </section>
+        <section id="topico7" class="topico">
+            <h2 class="subtitulo">Irmão: h1 ~ h2</h2>
+            <p class="descricao">Seleciona o irmão/paraleto do elemento.</p>
+            <div class="code">
+                <strong>h1 ~ h3</strong> { background: red; }
+                <br>
+                <br>
+                &lt;h1&gt...&lt;/h1&gt
+                <br>
+                <strong>&lt;h3&gt...&lt;/h3&gt</strong>
+                <br>
+                &lt;h2&gt...&lt;/h2&gt
+                <br>
+                <strong>&lt;h3&gt...&lt;/h3&gt</strong>
+                <br>
+            </div>
+        </section>
+        <section id="topico8" class="topico">
+            <h2 class="subtitulo">Adjacente: h1 + p</h2>
+            <p class="descricao">Seleciona o irmão/parelelo direto do elemento.</p>
+            <div class="code">
+                <strong>h1 + h3</strong> { background: red; }
+                <br>
+                <br>
+                &lt;h1&gt...&lt;/h1&gt
+                <br>
+                <strong>&lt;h3&gt...&lt;/h3&gt</strong>
+                <br>
+                &lt;h2&gt...&lt;/h2&gt
+                <br>
+               &lt;h3&gt...&lt;/h3&gt
+            </div>
+        </section>
+    </article>
+</body>
+</html>

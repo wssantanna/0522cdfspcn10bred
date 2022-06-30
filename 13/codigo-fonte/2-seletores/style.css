@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.documento {
+    margin: auto;
+    min-width: auto;
+    max-width: 480px;
+}
+
+.titulo {
+    font-size: 42px;
+}
+
+.subtitulo {
+    font-size: 32px;
+}
+
+.subtopico {
+    font-size: 24px;
+}
+
+.descricao {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.topico {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.code {
+    background-color: lightcyan;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 25px 15px;
+}
+
+.code strong {
+    color: blue;
+}
