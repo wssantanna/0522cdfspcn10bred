@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    background-color: antiquewhite;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 25px;
+    text-align: center;
+}
+
+.botao {
+    background-color: rgb(255, 140, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.campo {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.paragrafo {
+    font-size: 24px;
+}
+
+.lista {
+    margin: 25px 0;
+    padding: 0;
+}
+
+.lista__item {
+    list-style: none;
+    padding: 5px 0;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 - Personalizando formulário</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .formulario {
+            max-width: 420px;
+            margin: 0 auto;
+            padding: 25px 10px;
+        }
+
+        .formulario__campo {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .formulario__campo:invalid {
+            border: 2px solid red;
+        }
+
+        .formulario__campo::placeholder {
+            color: black;
+        }
+
+        .formulario__rotulo {
+            font-size: 16px;
+        }
+
+        .formulario__grupo {
+            margin: 10px 0;
+        }
+
+        .formulario__texto {
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .formulario__link {
+            color: orange;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .botao {
+            background-color: rgb(255, 140, 0);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 10px 25px;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .esconder {
+            border: 0;
+            clip: rect(0,0,0,0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <article class="formulario">
+        <h1>Login</h1>
+
+        <form 
+            name="credencial"
+            method="get" 
+            action="/"
+        >
+
+            <div class="formulario__grupo">
+                <label 
+                    class="esconder" 
+                    for="nome"
+                >
+                    E-mail
+                </label>
+                <input 
+                    class="formulario__campo"
+                    id="email"
+                    type="email"
+                    placeholder="Digite seu e-mail cadastrado"
+                >
+            </div>
+
+            <div class="formulario__grupo">
+                <label 
+                    class="esconder" 
+                    for="senha"
+                >
+                    Nome
+                </label>
+                <!-- Referência Expresssão Regular: https://pt.stackoverflow.com/questions/412465/validar-campos-de-senha-usando-javascript-regex -->
+                <input 
+                    class="formulario__campo" 
+                    id="senha" 
+                    name="senha"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    minlength="6"
+                >
+            </div>
+
+            <div class="formulario__grupo">
+                <button 
+                    class="botao"
+                    type="submit"
+                >
+                    Enviar
+                </button>
+
+                <span class="formulario__texto">Esqueceu sua senha? <a class="formulario__link" href="/">Recuperar acesso</a></span>
+            </div>
+        </form>
+    </article>
+</body>
+</html>
