@@ -45,16 +45,9 @@ O objetivo dessa metodologia é tornar o código fonte HTML o mais semântico, a
 */
 ```
 
-#### box-sizing
-
-A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. É possível usar essa propriedade para emular o comportamento dos navegadores (browsers) que não suportam corretamente a especificação da propriedade CSS box model.
-
-```css
-box-sizing: content-box
-box-sizing: border-box
-
-box-sizing: inherit
-```
+### Modelo de caixa - Box Model
+Por padrão o modelo de caixa da maioria dos navegadores considera a dimensão de qualquer elemento html a partir do resultado da soma do espaçamento interno `padding`, espaçamento externo `margin` e bordar `border`. A propriedade CSS `box-sizing` permite alterar a maneira como esse calculo é realizado.
+#### box-sizing: content-box | border-box
 
 **content-box**
 
@@ -63,6 +56,23 @@ Essa é o estilo padrão, conforme especificado pela norma CSS. As propriedades 
 **border-box**
 
 As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin.
+
+**Sintaxe**
+``` css
+.boxe {
+  box-sizing: content-box; 
+}
+```
+### Exibição/Comportamento da caixa
+#### display: none | block | inline | inline-block | ...
+**Sintaxe**
+```css
+display: none;
+display: block;
+display: inline;
+display: inline-block;
+...
+```
 
 ## Personalização
 ### background-color: cor
@@ -175,4 +185,21 @@ As propriedades de largura (width) e de altura (height) incluem o tamanho paddin
     </div>
   </body>
 </html>
+```
+
+### Contexto de posicionamento
+#### position: relative | absolute | fixed
+**Sintaxe**
+``` css
+.boxe {
+  position: relative; 
+}
+```
+
+### Posicionamento de camadas (profundidade)
+#### z-index: posição (número)
+``` css
+.boxe {
+  z-index: 1; 
+}
 ```
