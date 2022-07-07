@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15 - Tableless</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .boxe {
+            /* Personalização */
+            background-color: fuchsia;
+            /*             
+            border-width: 5px;
+            border-style: solid;
+            border-color: white;
+            */
+            border: 5px solid white;
+            font-family: 'Dancing Script', cursive, Georgia;
+            font-size: 24px;
+            /* Dimensões */
+            height: 100px;
+            width: 100px;
+                /* 1. Espaçamento externo */
+                /* margin: 10px; */
+                /*
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                */
+                margin: 10px 10px 10px 10px; /* topo, direita, baixo, esquerda */
+                /* 2. Espaçamento interno */
+                /* padding: 10px; */
+                /*                
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                */
+                padding: 10px 10px 10px 10px; /* topo, direita, baixo, esquerda */
+            /* Posicionamento */
+            float: left;
+            text-align: right;
+        }
+        
+        .conteudo {
+            background-color: lightgray;
+            overflow: auto;
+        }
+
+        .quebrar-linha {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        width: 100%;
+        height: auto;
+    -->
+    <div class="conteudo">
+        <div class="boxe">1</div>
+        <div class="boxe">2</div>
+        <div class="boxe quebrar-linha">3</div>
+        <div class="boxe">4</div>
+    </div>
+</body>
+</html>
