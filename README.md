@@ -96,20 +96,61 @@ Identificar os elementos de um documento HTML e reconhecer atributos globais.
 ### [Aula 13 - CSS: Introdução à Sintaxe](./13/README.md)
 <small>30 de junho 2022 - quinta-feira</small>
 
-- [ ] Sintaxe da linguagem CSS
+- [x] Sintaxe da linguagem CSS
 
-- [ ] Seletores
+- [x] Seletores
 
-    - [ ] Seleção: Global/Universal
+    - [x] Seleção: Global/Universal
 
-    - [ ] Seleção: Elemento 
+    - [x] Seleção: Elemento 
 
-    - [ ] Seleção: Classe
+    - [x] Seleção: Classe
 
-    - [ ] Seleção: Id
+    - [x] Seleção: Id
 
-    - [ ] Seleção: Atributo
+    - [x] Seleção: Atributo
 
-    - [ ] Seleção: Operadores
+    - [x] Seleção: Operadores
 
-    - [ ] Seleção: Especificidade
+    - [x] Seleção: Especificidade
+
+### [Aula 14 - CSS: Formulario](./14/README.md)
+<small>05 de julho 2022 - terça-feira</small>
+
+- [x] Seletores
+
+    - [x] Seleção: Pseudo-classe
+
+    - [x] Seleção: Pseudo-elemento
+
+### [Aula 15 - CSS: Tableless](./15/README.md)
+
+- [ ] Modelo de caixa
+
+    - [ ] Dimensões
+
+        - [ ] width
+
+        - [ ] height
+
+        - [ ] min-width
+
+        - [ ] max-width
+
+    - [ ] Espaçamento interno / externo
+
+        - [ ] padding
+
+        - [ ] margin
+
+    - [ ] Bordar
+
+        - [ ] border
+
+    - [ ] box-sizing
+
+- [ ] Posicionamento
+
+    - [ ] float
+
+    - [ ] clear

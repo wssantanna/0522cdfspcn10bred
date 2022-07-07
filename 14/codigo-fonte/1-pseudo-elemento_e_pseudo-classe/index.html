@@ -14,30 +14,50 @@
         */
 
         /* :hover - Ao passar o mouse sobre o elemento. */
+        .campo:hover {
+            background-color:lightgray;
+        }
+
         .botao:hover {
-            background-color: rgb(210, 105, 30);
+            background-color: green;
         }
 
         /* :active - Ao pressionar o clique no elemento. */
+
         .botao:active {
-            background-color: rgb(210, 30, 141);
+            background-color: pink;
         }
 
         /* :visited - Quando o link já foi visitado. */
-        .botao:visited {
-            background-color: rgb(45, 210, 30);
+
+        .link {
+            text-decoration: none;
+        }
+
+        .link:visited {
+            color: red;
         }
 
          /* :focus - Quando o campo/input estiver ativo. */
+
         .campo:focus {
-            background-color: rgb(255, 69, 0);
-            color: white;
+            background-color: chartreuse;
         }
 
         /* :invalid - Quando o campo/input não possuir um valor válido. */
         .campo:invalid {
-            background-color: rgb(255, 0, 0);
-            color: white;
+            border: 3px solid red;
+        }
+
+        /* :nth-child(n) - Seleciona a partir da ordem ou regra . */
+        /*
+            even - Par
+            odd  - Impar
+            n    - Qualquer ordem númerica.
+        */
+        .lista__item:nth-child(even) {
+            background-color: cyan;
+            border-radius: 5px;
         }
 
         /*
@@ -45,58 +65,42 @@
         */
 
         /* ::before - Antes do conteúdo dentro do elemento. */
+
         .conteudo::before {
-            background-color: rgb(165, 42, 42);
-            border-radius: 5px;
-            content: '::before'; /* Posso inserir um conteúdo com esse atributo */
+            background-color: red;
+            border-radius: 10px;
+            content: '::before';
             color: white;
             display: block;
-            padding: 5px 0;
-            margin: 10px 0;
+            padding: 20px;
         }
 
         /* ::after - Depois do conteúdo dentro do elemento. */
+
         .conteudo::after {
-            background-color: rgb(165, 42, 42);
-            border-radius: 5px;
-            content: '::after'; /* Posso inserir um conteúdo com esse atributo */
-            color: white;
+            background-color: greenyellow;
+            border-radius: 10px;
+            content: '::after';
+            color: dark;
             display: block;
-            padding: 5px 0;
-            margin: 10px 0;
+            padding: 20px;
         }
 
         /* ::first-letter - Seleciona a primeira letra do texto. */
         .paragrafo::first-letter {
-            color: rgb(255, 69, 0);
-            font-weight: 900;
+            color: red;
+            font-size: 42px;
+            font-weight: 800;
         }
 
         /* ::first-line - Seleciona a primeira linha antes da quebra <br>. */
         .paragrafo::first-line {
-            color: rgb(128, 0, 128);
-            font-weight: 900;
+            font-size: 12px;
         }
 
-        /* ::nth-child(n) - Seleciona a partir da ordem ou regra . */
-        .lista__item:nth-child(2) {
-            background-color: rgb(0, 128, 0);
-            border-radius: 5px;
-            color: white;
-            font-weight: 900;
-        }
-
-        .lista__item:nth-last-child(3) {
-            background-color: rgb(255, 0, 0);
-            border-radius: 5px;
-            color: white;
-            font-weight: 900;
-        }
-
-        /* Utilizando Pseudo-classes com Pseudo-elementos */
-        .campo:focus::placeholder {
-            color: white;
-        }
+        /* 
+            Utilizando Pseudo-classes com Pseudo-elementos 
+        */
 
     </style>
 </head>
@@ -104,20 +108,25 @@
 
     <div class="conteudo">
 
-        <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br><br>Quasi laborum, dolore molestias debitis ullam eveniet atque eaque recusandae doloremque voluptas magni voluptatum repudiandae et distinctio exercitationem voluptate impedit rem omnis.</p>
+        <p class="paragrafo">Lorem <a class="link" href="https://www.google.com.br">ipsum dolor</a> sit amet consectetur, adipisicing elit.<br><br>Quasi laborum, dolore molestias debitis ullam eveniet atque eaque recusandae doloremque voluptas magni voluptatum repudiandae et distinctio exercitationem voluptate impedit rem omnis.</p>
 
         <div>
-            <input class="campo" name="email" type="email" placeholder="Digite seu e-mail">
+            <input 
+                class="campo" 
+                name="email" 
+                type="email" 
+                placeholder="Digite seu e-mail"
+            >
             <a class="botao" href="https://www.google.com.br" target="_blank">Botão</a>
         </div>
 
         <ul class="lista">
             <li class="lista__item">Willian</li>
-            <li class="lista__item">Guilherme</li>
-            <li class="lista__item">Isabela</li>
-            <li class="lista__item">Rafaela</li>
-            <li class="lista__item">Adriel</li>
-            <li class="lista__item">Agenor</li>
+            <li class="lista__item">Bruno Pablo</li>
+            <li class="lista__item">Lucas Akira</li>
+            <li class="lista__item">Debora Dias</li>
+            <li class="lista__item">Anwar</li>
+            <li class="lista__item">João Miguel</li>
         </ul>
 
     </div>
