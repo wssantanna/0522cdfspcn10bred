@@ -5,67 +5,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 15 - Tableless</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style type="text/css">
-        .boxe {
-            /* Personalização */
-            background-color: fuchsia;
-            /*             
-            border-width: 5px;
-            border-style: solid;
-            border-color: white;
-            */
-            border: 5px solid white;
-            font-family: 'Dancing Script', cursive, Georgia;
-            font-size: 24px;
-            /* Dimensões */
-            height: 100px;
-            width: 100px;
-                /* 1. Espaçamento externo */
-                /* margin: 10px; */
-                /*
-                margin-top: 10px;
-                margin-right: 10px;
-                margin-bottom: 10px;
-                margin-left: 10px;
-                */
-                margin: 10px 10px 10px 10px; /* topo, direita, baixo, esquerda */
-                /* 2. Espaçamento interno */
-                /* padding: 10px; */
-                /*                
-                padding-top: 10px;
-                padding-right: 10px;
-                padding-bottom: 10px;
-                padding-left: 10px;
-                */
-                padding: 10px 10px 10px 10px; /* topo, direita, baixo, esquerda */
-            /* Posicionamento */
-            float: left;
-            text-align: right;
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
         }
-        
-        .conteudo {
-            background-color: lightgray;
-            overflow: auto;
+        /*
+            Layout
+
+
+        */
+        .l-header {
+            background-color: black;
+            min-height: 100vh;
+            padding: 25px;
         }
 
-        .quebrar-linha {
-            clear: both;
+        .l-header > main {
+            border: 1px solid red;
+            padding: 25px 10px;
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .l-about {
+            border: 2px solid red;
+            margin: 20px auto;
+            max-width: 1280px;
+            padding: 25px;
+            overflow: hidden;
+        }
+
+        .l-about > div {
+            border: 2px solid red;
+            float: left;
+            padding: 0 10px;
+            width: 50%;
+        }
+
+        .l-newsletter {
+            background-color: #301a0f;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .l-newsletter__title {
+            font-size: 18px;
+            color: white;
+        }
+
+        .l-newsletter__nav {
+            border: 1px solid red;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .l-newsletter__item {
+            margin: 0 5px;
+        }
+
+        .l-contact {
+            padding: 25px 0;
+        }
+
+        .l-contact > div {
+            border: 1px solid red;
+            padding: 25px 10px;
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* --- */
+
+        /*
+            Texto
+
+        */
+        .h1 {
+            font-size: 32px;
+        }
+
+        .h2 {
+            font-size: 24px;
+        }
+
+        .p {
+            font-size: 18px;
+        }
+
+        .blockquote {
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <!--
-        width: 100%;
-        height: auto;
-    -->
-    <div class="conteudo">
-        <div class="boxe">1</div>
-        <div class="boxe">2</div>
-        <div class="boxe quebrar-linha">3</div>
-        <div class="boxe">4</div>
+
+    <!-- Cabeçalho -->
+    <div class="l-header">
+        <main>
+
+        </main>
     </div>
+
+    <!-- Sobre -->
+    <div class="l-about">
+
+        <div>
+            <h1 class="h2">Sobre</h1>
+            <p class="blockquote">“Um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos”</p>
+        </div>
+
+        <div>
+            <p class="p">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60.</p>
+        </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="l-newsletter">
+        <section>
+            <h2 class="l-newsletter__title">Acompanhe nossas promoções<br>nas redes sociais</h2>
+            <nav class="l-newsletter__nav">
+                <a class="l-newsletter__item" href="">
+                    <img src="#" alt="facebook">
+                </a>
+                <a class="l-newsletter__item" href="">
+                    <img src="#" alt="twitter">
+                </a>
+                <a class="l-newsletter__item" href="">
+                    <img src="#" alt="instagram">
+                </a>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Formulário contato -->
+    <div class="l-contact">
+        <div>
+            <section>
+                <h1 class="h2">Contatos</h1>
+                <form
+                    name="Contatos" 
+                    action="">
+                    <div class="c-form__group">
+                        <label 
+                            for="" 
+                            class="c-form__label"
+                        >
+                            Nome
+                        </label>
+                        <input 
+                            type="text" 
+                            class="c-form__control"
+                        >
+                    </div>
+                    <div class="c-form__group">
+                        <label 
+                            for="" 
+                            class="c-form__label"
+                        >
+                            Telefone
+                        </label>
+                        <input 
+                            type="text" 
+                            class="c-form__control"
+                        >
+                    </div>
+                    <div class="c-form__group">
+                        <label 
+                            for="" 
+                            class="c-form__label"
+                        >
+                            E-mail
+                        </label>
+                        <input 
+                            type="text" 
+                            class="c-form__control"
+                        >
+                    </div>
+                    <div class="c-form__group">
+                        <label 
+                            for="" 
+                            class="c-form__label"
+                        >
+                            Mensagem
+                        </label>
+                        <textarea 
+                            class="c-form__textarea"
+                            name="" 
+                            id="" 
+                            cols="30" 
+                            rows="10"
+                        >
+                        </textarea>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -7,80 +7,73 @@
     <title>Aula 15 - Contexto de posicionamento</title>
     <style type="text/css">
 
+        * { box-sizing: border-box; }
+
         body {
             background-color: black;
             font-family: Arial, Helvetica, sans-serif;
-            height: 200vh;
+            height: 500vh;
         }
 
         .boxe {
             background-color: greenyellow;
             border: 5px solid green;
-            font-size: 50px;
+            font-size: 18px;
             float: left;
-            height: 200px;
+            height: 75px;
             padding: 10px;
+            margin: 5px;
             text-align: center;
-            width: 200px;
+            width: 75px;
+        }
+
+        .conteudo {
+            margin: 100px auto;
+            max-width: 200px;
+            border: 5px solid orange;
+            overflow: hidden;
         }
 
         /* 1. Configuração do modelo de caixa */
-        * { box-sizing: border-box; }
-
-        .conteudo {
-            background-color: lightgray;
-            border: 5px solid orangered;
-            margin: 250px auto;
-            min-height: 400px;
-            overflow: auto;
-            width: 410px;
-        }
 
         /* 2. Posicionamento */
 
         /* 2.1. Contexto  */
+
         .posicao-relativa {
-            background-color: deeppink;
-            border: 5px solid pink;
             position: relative;
         }
 
-        .posicao-absoluta {
-            background-color: deepskyblue;
-            border: 5px solid blue;
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            z-index: 1;
+        .posicao-fixa {
+            background-color: pink;
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            cursor: pointer;
         }
 
-        .posicao-fixa {
-            background-color: rgb(255, 30, 0);
-            border: 5px solid rgb(255, 0, 0);
-            position: fixed;
-            top: 50px;
-            left: 50px;
-            z-index: 3;
+        .posicao-fixa:hover {
+            background-color: greenyellow;
         }
 
         .position-sticky {
-            background-color: rgb(140, 0, 255);
-            border: 5px solid rgb(38, 0, 121);
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            z-index: 4;
+            position: sticky;
         }
 
-        
         /* 2.1. Camadas  */
-        .posicao-absoluta-2 {
-            background-color: rgb(251, 255, 0);
-            border: 5px solid rgb(255, 123, 0);
+        .posicao-absoluta {
             position: absolute;
-            top: 75px;
-            left: 75px;
+            top: 10px;
+            left: 10px;
+            background-color: yellow;
+            z-index: 1;
+        }
 
+        .posicao-absoluta-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: blue;
             z-index: 2;
         }
         
