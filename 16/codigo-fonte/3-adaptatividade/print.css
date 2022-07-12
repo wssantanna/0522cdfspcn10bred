@@ -1,0 +1,9 @@
+html {
+    font-size: 3rem;
+}
+
+nav,
+aside,
+footer {
+    display: none;
+}

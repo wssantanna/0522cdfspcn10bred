@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Grid System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0 25px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav,
+        main,
+        aside,
+        footer {
+            align-items: center;
+            background-color: greenyellow;
+            border-radius: 10px;
+            display: flex;
+            font-weight: 900;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        nav {
+            grid-area: navegacao;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        aside {
+            grid-area: relacionados;
+        }
+
+        footer {
+            grid-area: rodape;
+        }
+
+        .l-app {
+            border: 5px solid gray;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 960px;
+            min-height: 600px;
+            /* 
+                    Grid layout
+                    - display: grid
+                    - grid-template-columns
+                    - grid-template-rows
+                    - minmax()
+                    - repeat()
+                    - grid-area
+                */
+            display: grid;
+            gap: 25px;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-columns: minmax(300px, 1fr) 1fr; */
+            /* grid-template-rows: 1fr 3fr; */
+            grid-template-columns: 150px repeat(3, 1fr);
+            grid-template-rows: 100px 1fr 50px;
+            grid-template-areas:
+                "navegacao      navegacao   navegacao   navegacao"
+                "relacionados   conteudo    conteudo    conteudo"
+                "rodape         rodape      rodape      rodape";
+        }
+    </style>
+</head>
+<body>
+
+    <div class="l-app">
+        <nav>Navegação</nav>
+        <main>Conteúdo</main>
+        <aside>Relacionados</aside>
+        <footer>Rodapé</footer>
+    </div>
+
+</body>
+</html>

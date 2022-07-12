@@ -124,33 +124,85 @@ Identificar os elementos de um documento HTML e reconhecer atributos globais.
     - [x] Seleção: Pseudo-elemento
 
 ### [Aula 15 - CSS: Tableless](./15/README.md)
+<small>07 de julho 2022 - quinta-feira</small>
 
-- [ ] Modelo de caixa
+- [x] Modelo de caixa
 
-    - [ ] Dimensões
+    - [x] Dimensões
 
-        - [ ] width
+        - [x] width
 
-        - [ ] height
+        - [x] height
 
-        - [ ] min-width
+        - [x] min-width
 
-        - [ ] max-width
+        - [x] max-width
 
-    - [ ] Espaçamento interno / externo
+    - [x] Espaçamento interno / externo
 
-        - [ ] padding
+        - [x] padding
 
-        - [ ] margin
+        - [x] margin
 
-    - [ ] Bordar
+    - [x] Bordar
 
-        - [ ] border
+        - [x] border
 
-    - [ ] box-sizing
+    - [x] box-sizing
 
-- [ ] Posicionamento
+- [x] Posicionamento
 
-    - [ ] float
+    - [x] float
 
-    - [ ] clear
+    - [x] clear
+
+## [Aula 16 - CSS: Responsividade](./16/README.md)
+<small>12 de julho 2022 - terça-feira</small>
+
+- [ ] Grid system
+
+    - [ ] `display: grid`
+
+    - [ ] `grid-template-columns`
+
+    - [ ] `grid-template-rows`
+
+        - [ ] `repeat()`
+        
+        - [ ] `minmax()`
+
+        - [ ] `auto-fit`
+
+        - [ ] `gap`
+
+    - [ ] `grid-area`
+
+    - [ ] `grid-template-areas`
+
+
+- [ ] Responsividade
+
+    - [ ] Unidade de medida
+
+        - [ ] `em`
+
+        - [ ] `rem`
+
+        - [ ] `%`
+
+        - [ ] `px`
+
+        - [ ] `vw`
+
+        - [ ] `vh` 
+
+        - [ ] `fr`
+
+    - [ ] `media-query`
+
+- [ ] Adaptatividade
+
+    - [ ] `<link media="">`
+
+    - [ ] `<link size="">`
+    

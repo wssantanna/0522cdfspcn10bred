@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Adaptatividade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*
+            Mobile first (Celulares Primeiro)
+            É um conceito que prioriza as regras que serão utilizadas no celular,
+            e posteriormente em telas maiores.
+            ---- 
+            Obs.: Muito se fala sobre padronização de tamanhos de tela, 
+            porém por se tratar de valores imprecisos, é aconselhável
+            acompanhar os valores que melhor se adequam a relalidade do projeto. 
+            É possível extrair tais informações em relatórios da equipe de marketing.
+        */
+
+        html {
+            font-size: 24px;
+        }
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 25px;
+        }
+
+        nav,
+        main,
+        aside,
+        footer {
+            align-items: center;
+            background-color:darkorange ;
+            border-radius: 10px;
+            display: flex;
+            font-weight: 900;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        nav {
+            grid-area: navegacao;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        aside {
+            grid-area: relacionados;
+        }
+
+        footer {
+            grid-area: rodape;
+        }
+
+        .l-app {
+            border: 5px solid gray;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 960px;
+            min-height: 600px;
+            /* 
+                    Grid layout
+                    - display: grid
+                    - grid-template-columns
+                    - grid-template-rows
+                    - minmax()
+                    - repeat()
+                    - grid-area
+                */
+                display: grid;
+                gap: 25px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 1fr 100px 50px;
+                grid-template-areas:
+                "navegacao"
+                "conteudo"
+                "relacionados"
+                "rodape";
+        }
+
+        /*
+            Sendo assim, as regras CSS relacionadas a versão
+            para telas maiores é aplicada nas regras das medias query.
+            - min-width
+            - max-width
+            - orientation
+            ----
+            Obs.: É possível utilizar valores relativos. Segue algumas tabelas
+            - % Porcentagem 
+            elementro_filho * 100 / elemento_pai = porcentagem
+            300 * 100 / 1200 = 25%
+            - em / rem
+            Normalmente utilizadas em fontes, pois tornam  o processo
+            de maniputação do tamanho relativo, facilitando a adaptação de layout.
+            1em = 16px
+            16px * 1.5em = 24px;
+            Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
+            e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
+            1rem = 16px
+            16px * 1.5rem = 24px;
+            - vw / vh
+            Ambas medidas levam
+        */
+
+        @media (min-width: 768px) {
+
+            html {
+                font-size: 18px;
+            }
+
+            nav,
+            main,
+            aside,
+            footer {
+                background-color:orange;
+            }
+
+            nav {
+                font-size: 1rem;
+            }
+
+            main {
+                font-size: 1em;
+            }
+
+            .l-app {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 100px 1fr 50px;
+                grid-template-areas:
+                "navegacao navegacao"
+                "relacionados conteudo"
+                "rodape rodape";
+                /*
+                - em / rem
+                Normalmente utilizadas em fontes, pois tornam  o processo
+                de maniputação do tamanho relativo, facilitando a adaptação de layout.
+                1em = 16px
+                16px * 1.5em = 24px;
+                Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
+                e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
+                1rem = 16px
+                16px * 1.5rem = 24px;
+                */
+
+                font-size: 14px;
+            }
+
+        }
+
+        @media (min-width: 960px) {
+
+            html {
+                font-size: 16px;
+            }
+            
+            nav,
+            main,
+            aside,
+            footer {
+                background-color:darkorchid;
+            }
+
+            .conteudo {
+                grid-template-columns: 150px repeat(3, 1fr);
+                grid-template-areas:
+                "navegacao      navegacao   navegacao   navegacao"
+                "relacionados   conteudo    conteudo    conteudo"
+                "rodape         rodape      rodape      rodape";
+            }
+
+        }
+    </style>
+    <link rel="stylesheet" media="print" href="./print.css">
+</head>
+<body>
+    <div class="l-app"> <!-- 14px -->
+        <!-- 1rem = 24px (html) -->
+        <nav>Navegação</nav>
+        <main> <!-- 1em = 14px (pai conteudo) -->
+            <p>Conteúdo</p>
+        </main>
+        <aside>Relacionados</aside>
+        <footer>Rodapé</footer>
+    </div>
+</body>
+</html>
