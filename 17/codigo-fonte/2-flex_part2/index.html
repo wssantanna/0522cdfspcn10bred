@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19 - Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+
+        .conteudo-flexivel {
+            /* Conteúdo Flexível */
+            display: flex;
+        }
+
+        .espacamento-externo {
+            /* Espaçamento entre os itens */
+            gap: 5px;
+        }
+
+        .expandir {
+            flex-grow: 1;
+        }
+
+        .expandir-dobro {
+            flex-grow: 2;
+        }
+        
+        .expandir-triplo {
+            flex-grow: 3;
+        }
+
+        .dimensao-minima {
+            flex-basis: 250px;
+        }
+
+        .encolher {
+            flex-shrink: 1;
+        }
+
+        .encolher-dobro {
+            flex-shrink: 2;
+        }
+
+        .encolher-tiplo {
+            flex-shrink: 3;
+        }
+
+        .definir-ordem__primeiro {
+            order: 1;
+        }
+
+        .definir-ordem__segundo {
+            order: 2;
+        }
+
+        .definir-ordem__terceiro {
+            order: 3;
+        }
+
+        .alinhar-se__inicio {
+            align-self: start;
+        }
+
+        .alinhar-se__centro {
+            align-self: center;
+        }
+
+        .alinhar-se__final {
+            align-self: end;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <article class="conteudo">
+
+        <h1 class="conteudo__titulo">Design flexível 2/2</h1>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Define a expansão do item.<br>flex-grow</h2>
+            <div class="conteudo-flexivel espacamento-externo">
+                <div class="conteudo-flexivel__item expandir">1</div>
+                <div class="conteudo-flexivel__item expandir-triplo">2</div>
+                <div class="conteudo-flexivel__item expandir-triplo">3</div>
+                <div class="conteudo-flexivel__item expandir">4</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Define a proporção ou dimensão mínima inicial do item.<br>flex-basis</h2>
+            <div class="conteudo-flexivel espacamento-externo">
+                <div class="conteudo-flexivel__item expandir dimensao-minima">1</div>
+                <div class="conteudo-flexivel__item expandir">2</div>
+                <div class="conteudo-flexivel__item expandir">3</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Define a proporção de encolhimento do item.<br>flex-shrink</h2>
+            <div class="conteudo-flexivel espacamento-externo">
+                <div class="conteudo-flexivel__item expandir dimensao-minima encolher">1</div>
+                <div class="conteudo-flexivel__item expandir dimensao-minima encolher-dobro">2</div>
+                <div class="conteudo-flexivel__item expandir dimensao-minima encolher-tiplo">3</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Altera a ordem do item.<br>order</h2>
+            <div class="conteudo-flexivel espacamento-externo">
+                <div class="conteudo-flexivel__item expandir definir-ordem__segundo">1</div>
+                <div class="conteudo-flexivel__item expandir definir-ordem__terceiro">2</div>
+                <div class="conteudo-flexivel__item expandir definir-ordem__primeiro">3</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Alinha individualmente um item na vertical.<br>align-self</h2>
+            <div 
+                class="conteudo-flexivel espacamento-externo"
+                style="height: 400px;"
+            >
+                <div class="conteudo-flexivel__item expandir alinhar-se__inicio">1</div>
+                <div class="conteudo-flexivel__item expandir alinhar-se__centro">2</div>
+                <div class="conteudo-flexivel__item expandir alinhar-se__final">3</div>
+            </div>
+        </section>
+
+    </article>
+
+</body>
+</html>

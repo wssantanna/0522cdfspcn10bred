@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 - Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        
+        .conteudo-flexivel {
+            /* Conteúdo Flexível */
+            display: flex;
+        }
+        
+        .direcao {
+            /* Direção da distribuição */
+            flex-direction: column;
+        }
+
+        .espacamento-externo {
+            /* Espaçamento entre os itens */
+            gap: 5px;
+        }
+        
+        .quebra-de-linha {
+            /* Controle de quebra de linhas */
+            flex-wrap: wrap;
+        }
+
+        .alinhamento-vertical {
+            /* Alinhamento vertical */
+            align-items: center;
+        }
+        
+        .distribuicao-horizontal {
+            /* Distribuição horizontal */
+            justify-content: space-between;
+        }
+
+        .distribuicao-vertical {
+            /* Distribuição vertical */
+            align-content: space-around;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <article class="conteudo">
+
+        <h1 class="conteudo__titulo">Design flexível - Flexbox</h1>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Conteúdo flexível</h2>
+            <div class="conteudo-flexivel espacamento-externo">
+                <div class="conteudo-flexivel__item">1</div>
+                <div class="conteudo-flexivel__item">2</div>
+                <div class="conteudo-flexivel__item">3</div>
+                <div class="conteudo-flexivel__item">4</div>
+                <div class="conteudo-flexivel__item">5</div>
+                <div class="conteudo-flexivel__item">6</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Direção da distruição</h2>
+            <div class="conteudo-flexivel direcao espacamento-externo">
+                <div class="conteudo-flexivel__item">1</div>
+                <div class="conteudo-flexivel__item">2</div>
+                <div class="conteudo-flexivel__item">3</div>
+                <div class="conteudo-flexivel__item">4</div>
+                <div class="conteudo-flexivel__item">5</div>
+                <div class="conteudo-flexivel__item">6</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Controle de quebra de linhas</h2>
+            <div class="conteudo-flexivel quebra-de-linha  espacamento-externo">
+                <!-- Não façam isso em seu código fonte jovens! -->
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 250px;"
+                >
+                    1
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 250px;"
+                >
+                    2
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 250px;"
+                >
+                    3
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 250px;"
+                >
+                    4
+                </div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Alinhamento vertical</h2>
+            <!-- Não façam isso em seu código fonte jovens! -->
+            <div 
+                class="conteudo-flexivel alinhamento-vertical"
+                style="height: 400px;"
+            >
+                <div class="conteudo-flexivel__item">1</div>
+                <div class="conteudo-flexivel__item">2</div>
+                <div class="conteudo-flexivel__item">3</div>
+                <div class="conteudo-flexivel__item">4</div>
+                <div class="conteudo-flexivel__item">5</div>
+                <div class="conteudo-flexivel__item">6</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Distribuição horizontal</h2>
+            <div class="conteudo-flexivel distribuicao-horizontal">
+                <div class="conteudo-flexivel__item">1</div>
+                <div class="conteudo-flexivel__item">2</div>
+                <div class="conteudo-flexivel__item">3</div>
+                <div class="conteudo-flexivel__item">4</div>
+                <div class="conteudo-flexivel__item">5</div>
+                <div class="conteudo-flexivel__item">6</div>
+            </div>
+        </section>
+
+        <section class="conteudo__sessao">
+            <h2 class="conteudo__subtitulo">Distribuição vertical</h2>
+            <!-- Não façam isso em seu código fonte jovens! -->
+            <div 
+                class="conteudo-flexivel distribuicao-vertical"
+                style="height: 400px; flex-wrap: wrap;"
+            >
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 50%; height: 50px;"
+                >
+                    1
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 50%; height: 50px;"
+                >
+                    2
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 50%; height: 50px;"
+                >
+                    3
+                </div>
+                <div 
+                    class="conteudo-flexivel__item"
+                    style="width: 50%; height: 50px;"
+                >
+                    4
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+</body>
+</html>
