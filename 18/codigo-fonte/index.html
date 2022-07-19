@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações com CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vermelho:hover {
+            background-color: orangered;
+            /* Transição */ 
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+
+        .laranja:hover {
+            background-color: red;
+            /* Transformação */
+            transform: scale(1.5) translateY(-10px);
+            /*
+                scale();
+                skew();
+                rotate();
+                translate();
+            */
+            /* Transição */ 
+            transition-property: transform, background-color;
+            transition-duration: 1s;
+        }
+
+        .laranja:active {
+            /* Transformação */
+            transform: rotate(90deg);
+            /* Transição */ 
+            transition-property: transform, background-color;
+            transition-duration: 1s;
+        }
+
+        /* Keyframe */
+        @keyframes animar-boxe {
+            0% {
+                transform: translateX(0);
+                opacity: 100%;
+            }
+            50% {
+                opacity: 50%;
+                transform: translateX(200px);
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 100%;
+            }
+        }
+
+        .verde  {
+            /* Atributos de animação */
+            animation-name: animar-boxe;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="conteudo">
+
+        <h1 class="conteudo__titulo">Animações com CSS</h1>
+        
+        <!-- 1. Transition -->
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Transição</h2>
+            <div class="sessao__exemplos">
+                <!-- Nosso exemplo acontece aqui... -->
+                <div class="boxe vermelho"></div>
+            </div>
+        </section>
+
+        <!-- 2. Transform -->
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Transformação</h2>
+            <div class="sessao__exemplos">
+                <div class="boxe laranja"></div>
+            </div>
+        </section>
+    
+        <!-- 3. Keyframes -->
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Keyframes</h2>
+            <div class="sessao__exemplos">
+                <div class="boxe verde"></div>
+            </div>
+        </section>
+    
+    </div>
+
+</body>
+</html>

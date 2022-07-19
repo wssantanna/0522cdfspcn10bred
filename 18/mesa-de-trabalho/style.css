@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    margin: auto;
+    max-width: 960px;
+}
+
+.caixa {
+    background-color: gray;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 25px;
+    margin: 10px 0;
+}
+
+/* 
+    O código fonte da atividade começa 
+    a partir desse trecho... 
+*/

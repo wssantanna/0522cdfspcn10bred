@@ -1,0 +1,54 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    background-color:lightgray;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 25px;
+}
+
+.conteudo__titulo {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sessao {
+    border: 5px solid gray;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.sessao__titulo {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.sessao__exemplos {
+    display: block;
+}
+
+.boxe {
+    height: 50px;
+    width: 50px;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.verde {
+    background-color: yellowgreen;
+}
+
+.laranja {
+    background-color: orange;
+}
