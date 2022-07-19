@@ -8,79 +8,78 @@
     <title>Aula 16 - Grid System</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0 25px;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+        /* 
+            Layout 
+            
+        */
+
+        /*
+            1. Criando um Grid Container.
+        */
+        .l-app {
+            border: 5px solid gray;
+            display: grid;
+            gap: 5px;
+            padding: 5px;
+            min-height: 70vh;
+            margin: 0 auto;
+            max-width: 960px;
+            width: 100vw;
+
+            /* 
+                1.1. Defino qual modelo de área Grid vou utilizar 
+            */
+            grid-template-areas:
+                "relacionado        nav         nav         nav"
+                "relacionado        conteudo    conteudo    conteudo"
+                "relacionado        rodape      rodape      rodape";
+            /*
+                2.2. Defino qual model de linhas e colunas vou utilizar
+            */
+            grid-template-columns: repeat(minmax(auto-fill, 1fr), 4); /* Fração = 100% / 4 = 25% */ /* 1fr 1fr 1fr 1fr */
+            /* grid-template-columns: repeat(100px, 4); 100px 100px 100px 100px */
+            /* grid-template-columns: repeat(100px, 2) repeat(50px, 2);  100px 100px 50px 50px */ 
+            grid-template-rows: minmax(40px, 50px) 1fr minmax(40px, 50px);
         }
 
-        nav,
-        main,
-        aside,
-        footer {
-            align-items: center;
-            background-color: greenyellow;
-            border-radius: 10px;
-            display: flex;
-            font-weight: 900;
-            justify-content: center;
-            padding: 25px;
+        /*
+            2. Nome para cada área da aplicação.
+        */
+        .l-nav {
+            grid-area: nav;
         }
 
-        nav {
-            grid-area: navegacao;
-        }
-
-        main {
+        .l-conteudo {
             grid-area: conteudo;
         }
 
-        aside {
-            grid-area: relacionados;
+        .l-relacionados {
+            grid-area: relacionado;
         }
 
-        footer {
+        .l-rodape {
             grid-area: rodape;
         }
 
-        .l-app {
-            border: 5px solid gray;
-            padding: 25px;
-            margin: 25px auto;
-            max-width: 960px;
-            min-height: 600px;
-            /* 
-                    Grid layout
-                    - display: grid
-                    - grid-template-columns
-                    - grid-template-rows
-                    - minmax()
-                    - repeat()
-                    - grid-area
-                */
-            display: grid;
-            gap: 25px;
-            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-            /* grid-template-columns: repeat(4, 1fr); */
-            /* grid-template-columns: minmax(300px, 1fr) 1fr; */
-            /* grid-template-rows: 1fr 3fr; */
-            grid-template-columns: 150px repeat(3, 1fr);
-            grid-template-rows: 100px 1fr 50px;
-            grid-template-areas:
-                "navegacao      navegacao   navegacao   navegacao"
-                "relacionados   conteudo    conteudo    conteudo"
-                "rodape         rodape      rodape      rodape";
+        .l-nav,
+        .l-conteudo,
+        .l-relacionados,
+        .l-rodape {
+            background-color: greenyellow;
+            border-radius: 5px;
+            font-family: Arial Black, sans-serif;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
     <div class="l-app">
-        <nav>Navegação</nav>
-        <main>Conteúdo</main>
-        <aside>Relacionados</aside>
-        <footer>Rodapé</footer>
+        <nav class="l-nav">Navegação</nav>
+        <main class="l-conteudo">Conteúdo</main>
+        <aside class="l-relacionados">Relacionados</aside>
+        <footer class="l-rodape">Rodapé</footer>
     </div>
 
 </body>

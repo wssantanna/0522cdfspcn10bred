@@ -159,50 +159,50 @@ Identificar os elementos de um documento HTML e reconhecer atributos globais.
 ## [Aula 16 - CSS: Responsividade](./16/README.md)
 <small>12 de julho 2022 - terça-feira</small>
 
-- [ ] Grid system
+- [x] Grid system
 
-    - [ ] `display: grid`
+    - [x] `display: grid`
 
-    - [ ] `grid-template-columns`
+    - [x] `grid-template-columns`
 
-    - [ ] `grid-template-rows`
+    - [x] `grid-template-rows`
 
-        - [ ] `repeat()`
+        - [x] `repeat()`
         
-        - [ ] `minmax()`
+        - [x] `minmax()`
 
-        - [ ] `auto-fit`
+        - [x] `auto-fit`
 
-        - [ ] `gap`
+        - [x] `gap`
 
-    - [ ] `grid-area`
+    - [x] `grid-area`
 
-    - [ ] `grid-template-areas`
+    - [x] `grid-template-areas`
 
 
-- [ ] Responsividade
+- [x] Responsividade
 
-    - [ ] Unidade de medida
+    - [x] Unidade de medida
 
-        - [ ] `em`
+        - [x] `em`
 
-        - [ ] `rem`
+        - [x] `rem`
 
-        - [ ] `%`
+        - [x] `%`
 
-        - [ ] `px`
+        - [x] `px`
 
-        - [ ] `vw`
+        - [x] `vw`
 
-        - [ ] `vh` 
+        - [x] `vh` 
 
-        - [ ] `fr`
+        - [x] `fr`
 
-    - [ ] `media-query`
+    - [x] `media-query`
 
-- [ ] Adaptatividade
+- [x] Adaptatividade
 
-    - [ ] `<link media="">`
+    - [x] `<link media="">`
 
-    - [ ] `<link size="">`
+    - [x] `<link size="">`
     

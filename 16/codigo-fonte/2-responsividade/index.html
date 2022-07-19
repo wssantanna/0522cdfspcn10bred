@@ -1,191 +1,205 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- Fonte padrão 16px -->
 <html lang="pt-br">
 <head>
+    <base href="../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 16 - Responsividade</title>
+    <title>Aula 16 - Grid System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="print" href="./print.css">
     <style>
+
         /*
-            Mobile first (Celulares Primeiro)
-            É um conceito que prioriza as regras que serão utilizadas no celular,
-            e posteriormente em telas maiores.
-            ---- 
-            Obs.: Muito se fala sobre padronização de tamanhos de tela, 
-            porém por se tratar de valores imprecisos, é aconselhável
-            acompanhar os valores que melhor se adequam a relalidade do projeto. 
-            É possível extrair tais informações em relatórios da equipe de marketing.
+            Desktop First
         */
 
+        /*
+            Proporção padrão do documento...
+        */
         html {
-            font-size: 24px;
+            font-size: 16px;
         }
 
-        body {
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 0 25px;
+        /* 
+            Layout 
+            
+        */
+
+        /*
+            1. Criando um Grid Container.
+        */
+        .l-app {
+            border: 5px solid gray;
+            display: grid;
+            gap: 5px;
+            padding: 5px;
+            min-height: 70vh;
+            margin: 0 auto;
+            max-width: 960px;
+            width: 100vw;
+
+            /* 
+                1.1. Defino qual modelo de área Grid vou utilizar 
+            */
+            grid-template-areas:
+                "relacionado        nav         nav         nav"
+                "relacionado        conteudo    conteudo    conteudo"
+                "relacionado        rodape      rodape      rodape";
+            /*
+                2.2. Defino qual model de linhas e colunas vou utilizar
+            */
+            grid-template-columns: minmax(1fr, 100px) repeat(minmax(auto-fill, 1fr), 3); /* Fração = 100% / 4 = 25% */ /* 1fr 1fr 1fr 1fr */
+            /* grid-template-columns: repeat(100px, 4); 100px 100px 100px 100px */
+            /* grid-template-columns: repeat(100px, 2) repeat(50px, 2);  100px 100px 50px 50px */ 
+            grid-template-rows: minmax(40px, 50px) 1fr minmax(40px, 50px);
         }
 
-        nav,
-        main,
-        aside,
-        footer {
-            align-items: center;
-            background-color:darkorange ;
-            border-radius: 10px;
-            display: flex;
-            font-weight: 900;
-            justify-content: center;
-            padding: 25px;
+        /*
+            2. Nome para cada área da aplicação.
+        */
+        .l-nav {
+            grid-area: nav;
         }
 
-        nav {
-            grid-area: navegacao;
-        }
-
-        main {
+        .l-conteudo {
             grid-area: conteudo;
         }
 
-        aside {
-            grid-area: relacionados;
+        .l-relacionados {
+            grid-area: relacionado;
         }
 
-        footer {
+        .l-rodape {
             grid-area: rodape;
         }
 
-        .l-app {
-            border: 5px solid gray;
-            padding: 25px;
-            margin: 25px auto;
-            max-width: 960px;
-            min-height: 600px;
-            /* 
-                    Grid layout
-                    - display: grid
-                    - grid-template-columns
-                    - grid-template-rows
-                    - minmax()
-                    - repeat()
-                    - grid-area
-                */
-                display: grid;
-                gap: 25px;
-                grid-template-columns: 1fr;
-                grid-template-rows: 100px 1fr 100px 50px;
-                grid-template-areas:
-                "navegacao"
-                "conteudo"
-                "relacionados"
-                "rodape";
+        .l-nav,
+        .l-conteudo,
+        .l-relacionados,
+        .l-rodape {
+            background-color: greenyellow;
+            border-radius: 5px;
+            font-family: Arial Black, sans-serif;
+            text-align: center;
+            padding: 10px;
         }
 
-        /*
-            Sendo assim, as regras CSS relacionadas a versão
-            para telas maiores é aplicada nas regras das medias query.
-            - min-width
-            - max-width
-            - orientation
-            ----
-            Obs.: É possível utilizar valores relativos. Segue algumas tabelas
-            - % Porcentagem 
-            elementro_filho * 100 / elemento_pai = porcentagem
-            300 * 100 / 1200 = 25%
-            - em / rem
-            Normalmente utilizadas em fontes, pois tornam  o processo
-            de maniputação do tamanho relativo, facilitando a adaptação de layout.
-            1em = 16px
-            16px * 1.5em = 24px;
-            Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
-            e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
-            1rem = 16px
-            16px * 1.5rem = 24px;
-            - vw / vh
-            Ambas medidas levam
+        .l-nav,
+        .l-conteudo,
+        .l-relacionados {
+            font-size: .8rem; /* 80% de 16px */
+        }
+
+        .l-rodape {
+            font-size: 10px;
+        }
+
+        .c-copyright {
+            font-size: 1em; /* 100% de 10px */
+        }
+
+        /* 
+            Tablet
+            Se 481px à 720px 
         */
-
-        @media (min-width: 768px) {
-
+        @media (max-width: 720px) {
             html {
-                font-size: 18px;
+                font-size: 20px;
             }
 
-            nav,
-            main,
-            aside,
-            footer {
-                background-color:orange;
+            .l-nav,
+            .l-conteudo,
+            .l-relacionados,
+            .l-rodape {
+                background-color: orangered;
             }
 
-            nav {
-                font-size: 1rem;
-            }
-
-            main {
-                font-size: 1em;
-            }
-
-            .l-app {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: 100px 1fr 50px;
-                grid-template-areas:
-                "navegacao navegacao"
-                "relacionados conteudo"
-                "rodape rodape";
-                /*
-                - em / rem
-                Normalmente utilizadas em fontes, pois tornam  o processo
-                de maniputação do tamanho relativo, facilitando a adaptação de layout.
-                1em = 16px
-                16px * 1.5em = 24px;
-                Obs.: A Unidade de medida de em leva em consideração o tamanho do pai, 
-                e a unidade de medida rem utiliza apenas o tamanho definido na tag <html>.
-                1rem = 16px
-                16px * 1.5rem = 24px;
-                */
-
+            .l-rodape {
                 font-size: 14px;
             }
 
-        }
+            .l-app {
+                /* 
+                    1.1. Defino qual modelo de área Grid vou utilizar 
+                */
+                grid-template-areas:
+                    "nav                nav         nav         nav"
+                    "relacionado        conteudo    conteudo    conteudo"
+                    "relacionado        rodape      rodape      rodape";
+                /*
+                    2.2. Defino qual model de linhas e colunas vou utilizar
+                */
+                grid-template-columns: repeat(minmax(auto-fill, 1fr), 4); /* Fração = 100% / 4 = 25% */ /* 1fr 1fr 1fr 1fr */
+                /* grid-template-columns: repeat(100px, 4); 100px 100px 100px 100px */
+                /* grid-template-columns: repeat(100px, 2) repeat(50px, 2);  100px 100px 50px 50px */ 
+                grid-template-rows: minmax(40px, 50px) 1fr minmax(40px, 50px);
 
-        @media (min-width: 960px) {
-
-            html {
-                font-size: 16px;
             }
             
-            nav,
-            main,
-            aside,
-            footer {
-                background-color:darkorchid;
-            }
-
-            .conteudo {
-                grid-template-columns: 150px repeat(3, 1fr);
-                grid-template-areas:
-                "navegacao      navegacao   navegacao   navegacao"
-                "relacionados   conteudo    conteudo    conteudo"
-                "rodape         rodape      rodape      rodape";
-            }
-
         }
+
+        /* 
+            Mobile
+            Se 0 à 480px 
+        */
+        @media (max-width: 480px) {
+
+            html {
+                font-size: 30px;
+            }
+
+            .l-nav,
+            .l-conteudo,
+            .l-relacionados,
+            .l-rodape {
+                background-color: violet;
+            }
+
+            .l-rodape {
+                font-size: 16px;
+            }
+
+            .l-app {
+                /* 
+                    1.1. Defino qual modelo de área Grid vou utilizar 
+                */
+                grid-template-areas:
+                    "nav"
+                    "relacionado"
+                    "conteudo"
+                    "rodape";
+                /*
+                    2.2. Defino qual model de linhas e colunas vou utilizar
+                */
+                grid-template-columns: 1fr; /* Fração = 100% / 4 = 25% */ /* 1fr 1fr 1fr 1fr */
+                /* grid-template-columns: repeat(100px, 4); 100px 100px 100px 100px */
+                /* grid-template-columns: repeat(100px, 2) repeat(50px, 2);  100px 100px 50px 50px */ 
+                grid-template-rows: minmax(40px, 50px) 1fr minmax(40px, 50px);
+
+            }
+        }
+
+        @media print {
+            .l-nav,
+            .l-relacionados,
+            .l-rodape {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 <body>
-    <div class="l-app"> <!-- 14px -->
-        <!-- 1rem = 24px (html) -->
-        <nav>Navegação</nav>
-        <main> <!-- 1em = 14px (pai conteudo) -->
-            <p>Conteúdo</p>
-        </main>
-        <aside>Relacionados</aside>
-        <footer>Rodapé</footer>
+
+    <div class="l-app">
+        <nav class="l-nav">Navegação</nav><!-- 1rem = 16px (html) -->
+        <main class="l-conteudo">Conteúdo</main><!-- 1rem = 16px (html) -->
+        <aside class="l-relacionados">Relacionados</aside><!-- 1rem = 16px (html) -->
+        <footer class="l-rodape"><!-- Fonte padrão 12px (contexto local) -->
+            <span class="c-copyright">Rodapé</span><!-- 1em = 12px (contexto local) -->
+        </footer>
     </div>
+
 </body>
 </html>
