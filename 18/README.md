@@ -5,7 +5,7 @@
 ### Valor de transição 
 
 ```css
-.botao {
+i.botao {
     background-color: red;
     color: white;
     /* Para definir os nomes das propriedades que deseja controlar a transição. */
@@ -16,7 +16,7 @@
 
 .botao:hover {
     background-color: orange;
-    color: inherit;
+    color: inhert;
 }
 ```
 

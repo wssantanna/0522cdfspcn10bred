@@ -8,56 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .vermelho:hover {
-            background-color: orangered;
-            /* Transição */ 
-            transition-property: background-color;
-            transition-duration: 1s;
+            background-color: greenyellow;
+            border-radius: 25px;
+            /*
+                transition-property: background-color;
+                transition-property: background-color border-radius;
+            */
+            transition-property: all;
+            transition-duration: 2s;
         }
 
         .laranja:hover {
+            transition-property: all;
+            transition-duration: 2s;
             background-color: red;
-            /* Transformação */
-            transform: scale(1.5) translateY(-10px);
-            /*
-                scale();
-                skew();
-                rotate();
-                translate();
-            */
-            /* Transição */ 
-            transition-property: transform, background-color;
-            transition-duration: 1s;
+            transform: translateX(25px) rotate(45deg);
+
         }
 
         .laranja:active {
-            /* Transformação */
-            transform: rotate(90deg);
-            /* Transição */ 
-            transition-property: transform, background-color;
-            transition-duration: 1s;
+            transition-property: all;
+            transition-duration: .5s;
+            border-radius: 25px;
+            transform: scale(1.5); /* 150% */
         }
 
-        /* Keyframe */
-        @keyframes animar-boxe {
+        @keyframes animar-box {
             0% {
-                transform: translateX(0);
-                opacity: 100%;
+                transform: translateX(100px);
             }
             50% {
-                opacity: 50%;
-                transform: translateX(200px);
+                transform: translateX(50px) rotate(45deg);
             }
             100% {
-                transform: translateX(0);
-                opacity: 100%;
+                transform: translateX(0) rotate(0deg);
             }
         }
 
         .verde  {
-            /* Atributos de animação */
-            animation-name: animar-boxe;
-            animation-duration: 2s;
+            animation-name: animar-box;
+            animation-duration: 1s;
             animation-iteration-count: infinite;
+        }
+
+        .vermelho {
+            animation-name: animar-box;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
         }
     </style>
 </head>
