@@ -1,21 +1,86 @@
-
 const Express = require('express');
 
+// Inicialização da instância do Servidor.
 const Aplicativo = new Express();
 
 Aplicativo.use(Express.json());
 
-Aplicativo.get('/', (RequisicaoCliente, RespostaServidor) => RespostaServidor.send('API Ok!'));
+// Controladores
+function RequererTodos(Cliente, Servidor) {
+    let corpo = {
+        recurso: 'Listar todos'
+    }
+    
+    return Servidor.json(corpo);
+}
 
-Aplicativo.get('/post', (RequisicaoCliente, RespostaServidor) => RespostaServidor.json());
+function RegistrarUm(Cliente, Servidor) {
+    let corpo = {
+        recurso: 'Registrar'
+    }
+    
+    return Servidor.json(corpo);
+}
 
-Aplicativo.post('/post', (RequisicaoCliente, RespostaServidor) => RespostaServidor.json());
+function SubstituirUm(Cliente, Servidor) {
+    let corpo = {
+        recurso: 'Substituir'
+    }
+    
+    return Servidor.json(corpo);
+}
 
-Aplicativo.put('/post', (RequisicaoCliente, RespostaServidor) => RespostaServidor.json());
+function AtualizarUm(Cliente, Servidor) {
+    let corpo = {
+        recurso: 'Atualizar'
+    }
+    
+    return Servidor.json(corpo);
+}
 
-Aplicativo.patch('/post', (RequisicaoCliente, RespostaServidor) => RespostaServidor.json());
+function DeletarUm(Cliente, Servidor) {
+    let corpo = {
+        recurso: 'Deletar'
+    }
+    
+    return Servidor.json(corpo);
+}
 
-Aplicativo.delete('/post', (RequisicaoCliente, RespostaServidor) => RespostaServidor.json());
+// Rotas
+Aplicativo.get('/posts/', RequererTodos);
 
+Aplicativo.post('/posts', RegistrarUm);
 
-Aplicativo.listen(1234, () => console.log('Servidor funcionando!'));
+Aplicativo.put('/posts', SubstituirUm);
+
+Aplicativo.patch('/posts', AtualizarUm);
+
+Aplicativo.delete('/posts', DeletarUm);
+
+// Configurações de inicialização do Servidor.
+
+function DetalheServidor() {
+    console.log('Servidor esta funcionando')
+}
+
+Aplicativo.listen(5678, DetalheServidor);
+
+/*
+    Opção 1 
+
+    let DetalheServidor = () => console.log('Servidor esta funcionando');
+
+    Aplicativo.listen(1234, DetalheServidor);
+
+    Opção 2
+
+    Aplicativo.listen(1234, () => console.log('Servidor esta funcionando'));
+
+    Opção 3
+
+    function DetalheServidor() {
+        console.log('Servidor esta funcionando')
+    }
+
+    Aplicativo.listen(1234, DetalheServidor);
+*/
