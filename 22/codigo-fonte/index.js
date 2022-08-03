@@ -1,3 +1,4 @@
+
 const Express = require('express');
 
 const Aplicativo = new Express();
@@ -6,22 +7,59 @@ const Aplicativo = new Express();
 // Converte os valores de retorno do servidor para JSON.
 Aplicativo.use(Express.json()); 
 // converte os valores recebidos no formulário de application/x-www-form-urlencoded para JSON.
-Aplicativo.use(Express.urlencoded({ extended: true })); 
+Aplicativo.use(Express.urlencoded({ extended: true })); // application/json
 
-function Autenticar(client, servidor) {
+// Model
+const Model = [
+    {
+        id: 1,
+        nome: "Willian"
+    },
+    {
+        id: 2,
+        nome: "Isac"
+    },
+    {
+        id: 3,
+        nome: "Savio"
+    },
+]
 
-    // Separação dos campos
-    const { email, senha } = cliente.body;
-
-    // Retorno o JSON dos dados capturados
-    servidor.json({ email, senha });
+// Controller Web API
+function HomeController(cliente, servidor) {
+    servidor.json(Model);
 }
 
-// Rotas
-Aplicativo.get('/autenticar', (cliente, servidor) => {
-    servidor.sendFile(`${__dirname}/views/Autenticar.html`);
-});
+function AutenticarController(cliente, servidor) {
 
-Aplicativo.post('/api/autenticar', Autenticar);
+    const { usuario, senha } = cliente.body;
 
-Aplicativo.listen(5678);
+    if(usuario == null || senha == null) {
+        servidor.send('Preencha o formulário!')
+    }
+    else {
+        servidor.json({ usuario, senha });
+    }
+
+}
+
+// View Controller 
+function AutenticarViewController(cliente, servidor) {
+    servidor.sendFile(__dirname + '/Autenticar.html');
+}
+
+function HomeViewController(cliente, servidor) {
+    servidor.sendFile(__dirname + '/Home.html');
+}
+
+// Rota
+Aplicativo.get('/api', HomeController);
+Aplicativo.post('/api/autenticar', AutenticarController);
+
+Aplicativo.get('/view', HomeViewController);
+Aplicativo.get('/view/autenticar', AutenticarViewController);
+
+
+// Rota + Controlador  = Endpoint
+
+Aplicativo.listen(5678, () => console.log('Servidor rodando!'));
