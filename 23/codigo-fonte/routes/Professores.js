@@ -1,9 +1,11 @@
 const Express = require('express');
 
-const { TodosProfessores } = require('../controllers/Professores');
+const { RequererTodos, RequererUmPelaId } = require('../Controllers/ProfessoresController');
 
 const Rotas = Express.Router();
 
-Rotas.get('/', TodosProfessores);
+Rotas.get('/', RequererTodos);
+
+Rotas.get('/:id', RequererUmPelaId);
 
 module.exports = Rotas;
