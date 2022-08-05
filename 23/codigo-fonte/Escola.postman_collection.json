@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "980df3d6-b770-4279-bdf2-d40cfc78a045",
+		"name": "Escola",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10265495"
+	},
+	"item": [
+		{
+			"name": "Todos os alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5678/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aluno pela Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5678/alunos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alunos filtrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5678/alunos/?nome=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						""
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Willian\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5678/alunos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar alunos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5678/alunos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Substituir alunos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pedro\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5678/alunos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar alunos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pedro\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5678/alunos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar alunos",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Lucas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5678/alunos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5678",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
