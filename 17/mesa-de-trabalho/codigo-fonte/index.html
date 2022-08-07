@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa de trabalho</title>
+</head>
+<style type="text/css">
+
+    /*
+        1. Liste todos os itens verticalmente.
+    */
+    .lista {
+        display: flex;
+    }
+
+    /*
+        2. Implemente o cartão de cada item conforme a imagem referência.
+    */
+    .cartao {
+        display: flex;
+    }
+
+</style>
+<body>
+
+    <!-- 
+        Você deverá manipular a classe 'lista' para controlar o posicionamento dos itens. 
+        Busque aproximar-se ao máximo da imagem do resultado sedida pelo professor.
+    -->
+    <ul class="lista">
+        <li class="list-item">
+            <!-- 
+                Dica: Você deverá montar o design do cartão utilizando Flexbox também,
+                ou seja, você irá transformar o item em um conteúdo flexível com a propriedade display:flex.
+            -->
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">Linda Hart</h4>
+                    <p class="cartao__endereco">6765 Shady Ln Dr</p>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li class="list-item">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/46.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">Roger Medina</h4>
+                    <p class="cartao__endereco">2420 Paddock Way</p>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li class="list-item">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/59.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">Dean Sullivan</h4>
+                    <p class="cartao__endereco">6727 Airplane Ave</p>
+                </figcaption>
+            </figure>
+        </li>
+
+        <li class="list-item">
+            <figure class="cartao">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/78.jpg" alt="Foto do usuário">
+                <figcaption class="cartao__corpo">
+                    <h4 class="cartao__titulo">Elizabeth Austin</h4>
+                    <p class="cartao__endereco">6685 Blossom Hill Rd</p>
+                </figcaption>
+            </figure>
+        </li>
+        
+    </ul>
+
+</body>
+</html>

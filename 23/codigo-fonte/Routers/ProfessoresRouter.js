@@ -25,5 +25,4 @@ ProfessoresRouter.patch('/professores/:id', RequererAtualizarUmPelaId);
 
 ProfessoresRouter.delete('/professores/:id', RequererDeletarUmPelaId);
 
-
 module.exports = ProfessoresRouter;
