@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente 1</title>
+</head>
+<body> 
+
+    <h1>Cliente 2</h1>
+
+    <h2>Rua</h2>
+    <p id="rua"></p>
+    <h2>Cep</h2>
+    <p id="cep"></p>
+
+    <script>
+
+        // 1. Opção de comunicação
+        async function requererAlgoParaServidor() {
+
+            // 1. Fetch é responsável por fazer a requisição
+            // e ele vai retornar uma promessa.
+            const requisicao = await fetch('https://viacep.com.br/ws/01001000/json/');
+    
+            console.log('--Primeira promessa');
+            console.log("Ok?", requisicao.ok);
+            console.log("Qual o status?", requisicao.status);
+            // 2. Aguardo o servidor entregar o corpo para depois converter em json().
+            const resposta = await requisicao.json();
+            console.log('--Segunda promessa');
+            console.log("Qual o corpo da resposta?", resposta);
+    
+            // 3. Depois de todas as promessas ele ler esse trecho de código.
+            console.log('Outros trechos de código...');
+
+        }
+
+        // requererAlgoParaServidor(); 
+
+        // 2. Opção de comunicação
+        
+        const requisicao = fetch('https://viacep.com.br/ws/01001000/json/');
+
+        requisicao
+            .then((resposta) => {
+                console.log('--Primeira promessa');
+                console.log("Ok?", resposta.ok);
+                console.log("Qual o status?", resposta.status);
+                
+                // 2. Aguardo o servidor entregar o corpo para depois converter em json().
+                resposta.json()
+                    .then(respostaConvertidaEmJson => {
+                        console.log('--Segunda promessa');
+                        console.log("Qual o corpo da resposta?", respostaConvertidaEmJson);
+
+                        cep.innerText = respostaConvertidaEmJson.cep;
+                        rua.innerText = respostaConvertidaEmJson.logradouro;
+                    });
+            });
+
+            // 3. Depois de todas as promessas ele ler esse trecho de código.
+            console.log('Outros trechos de código...');
+            
+
+
+    </script>
+    
+</body>
+</html>

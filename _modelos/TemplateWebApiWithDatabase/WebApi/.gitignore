@@ -1,0 +1,5 @@
+node_modules
+
+# Arquivo responsável pelas variáveis de ambiente locais
+# Exemplo: configurações, chaves, etc...
+.env

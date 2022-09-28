@@ -1,15 +1,15 @@
 const Express = require('express');
 
-const {     
-    RequererTodos, 
+const {
+    RequererTodos,
     RequererUmPelaId,
-    RequererFiltrarPor, 
+    RequererFiltrarPor,
     RequererCriarUm,
     RequererSubstituirUmPelaId,
     RequererAtualizarUmPelaId,
     RequererDeletarUmPelaId } = require('../Controllers/AlunosControllers');
 
-const AlunosRouter = Express.Router(); 
+const AlunosRouter = Express.Router();
 
 AlunosRouter.get('/alunos', RequererTodos);
 
